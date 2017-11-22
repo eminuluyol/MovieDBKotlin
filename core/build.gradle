@@ -31,34 +31,24 @@ dependencies {
   testImplementation "android.arch.persistence.room:testing:${libraries.arch}"
 
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  implementation "com.android.support:appcompat-v7:${libraries.support}"
-  implementation "com.android.support:design:${libraries.support}"
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:${libraries.kotlin}"
+  api "com.android.support:appcompat-v7:${libraries.support}"
+  api "com.android.support:design:${libraries.support}"
+  api "org.jetbrains.kotlin:kotlin-stdlib-jre7:${libraries.kotlin}"
 
-  implementation "com.squareup.retrofit2:retrofit:${libraries.retrofit}"
-  implementation "com.squareup.retrofit2:adapter-rxjava2:${libraries.retrofit}"
-  implementation "com.squareup.retrofit2:converter-moshi:$libraries.retrofit"
+  api "com.google.dagger:dagger:${libraries.dagger}"
+  api "com.google.dagger:dagger-android:${libraries.dagger}"
+  api "com.google.dagger:dagger-android-support:${libraries.dagger}"
 
-  implementation "com.squareup.moshi:moshi:$libraries.moshi_version"
-  implementation "com.squareup.moshi:moshi-kotlin:$libraries.moshi_version"
-
-  implementation "com.squareup.okhttp3:okhttp:${libraries.okhttp}"
-  implementation "com.squareup.okhttp3:logging-interceptor:${libraries.okhttp}"
-
-  implementation "com.google.dagger:dagger:${libraries.dagger}"
-  implementation "com.google.dagger:dagger-android:${libraries.dagger}"
-  implementation "com.google.dagger:dagger-android-support:${libraries.dagger}"
-
-  implementation "io.reactivex.rxjava2:rxjava:${libraries.rxjava}"
-  implementation "io.reactivex.rxjava2:rxandroid:${libraries.rxandroid}"
-  implementation "io.reactivex.rxjava2:rxkotlin:$libraries.rxkotlin"
+  api "io.reactivex.rxjava2:rxjava:${libraries.rxjava}"
+  api "io.reactivex.rxjava2:rxandroid:${libraries.rxandroid}"
+  api "io.reactivex.rxjava2:rxkotlin:$libraries.rxkotlin"
 
   api "android.arch.lifecycle:extensions:${libraries.arch}"
   api "android.arch.lifecycle:reactivestreams:${libraries.arch}"
   api "android.arch.persistence.room:runtime:${libraries.arch}"
   api "android.arch.persistence.room:rxjava2:${libraries.arch}"
 
-  implementation "com.squareup.picasso:picasso:${libraries.picasso}"
+  api "com.squareup.picasso:picasso:${libraries.picasso}"
 
   kapt 'com.google.dagger:dagger-compiler:2.13'
   kapt 'com.google.dagger:dagger-android-processor:2.13'
