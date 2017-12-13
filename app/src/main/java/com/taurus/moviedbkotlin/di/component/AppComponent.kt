@@ -3,7 +3,7 @@ package com.taurus.core.di.component
 import com.taurus.core.di.module.ActivityBuilderModule
 import com.taurus.core.di.module.AppModule
 import com.taurus.moviedbkotlin.MovieApp
-import com.taurus.repository.NetworkModule
+import com.taurus.repository.di.NetworkModule
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule

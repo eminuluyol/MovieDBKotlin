@@ -1,4 +1,4 @@
-package com.taurus.repository
+package com.taurus.repository.remote
 
 enum class Status {
   SUCCESS,

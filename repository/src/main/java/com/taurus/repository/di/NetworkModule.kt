@@ -1,4 +1,4 @@
-package com.taurus.repository
+package com.taurus.repository.di
 
 import com.taurus.repository.remote.MovieDBService
 import dagger.Module
