@@ -23,6 +23,7 @@ android {
 
 dependencies {
     implementation project (":core")
+    implementation project (":repository")
 
     kapt 'com.google.dagger:dagger-compiler:2.13'
     kapt 'com.google.dagger:dagger-android-processor:2.13'

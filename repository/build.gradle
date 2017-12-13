@@ -1,18 +1,16 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
-  compileSdkVersion 26
-
-
-
+  compileSdkVersion configuration.compileSdkVersion
   defaultConfig {
-    minSdkVersion 19
-    targetSdkVersion 26
-    versionCode 1
-    versionName "1.0"
+    minSdkVersion configuration.minSdkVersion
+    targetSdkVersion configuration.targetSdkVersion
+    versionCode configuration.versionCode
+    versionName configuration.versionName
 
   }
-
   buildTypes {
     release {
       minifyEnabled false
@@ -33,6 +31,12 @@ dependencies {
 
   implementation "com.squareup.okhttp3:okhttp:${libraries.okhttp}"
   implementation "com.squareup.okhttp3:logging-interceptor:${libraries.okhttp}"
+
+  implementation "android.arch.persistence.room:runtime:${libraries.arch}"
+  implementation "android.arch.persistence.room:rxjava2:${libraries.arch}"
+
+  kapt 'com.google.dagger:dagger-compiler:2.13'
+  kapt 'com.google.dagger:dagger-android-processor:2.13'
 
   implementation project (":core")
 }

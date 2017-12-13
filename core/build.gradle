@@ -45,8 +45,6 @@ dependencies {
 
   api "android.arch.lifecycle:extensions:${libraries.arch}"
   api "android.arch.lifecycle:reactivestreams:${libraries.arch}"
-  api "android.arch.persistence.room:runtime:${libraries.arch}"
-  api "android.arch.persistence.room:rxjava2:${libraries.arch}"
 
   api "com.squareup.picasso:picasso:${libraries.picasso}"
 
