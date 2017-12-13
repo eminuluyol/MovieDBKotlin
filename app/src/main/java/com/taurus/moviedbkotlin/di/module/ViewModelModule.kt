@@ -1,7 +1,7 @@
 package com.taurus.core.di.module
 
 import android.arch.lifecycle.ViewModelProvider
-import com.taurus.core.di.ViewModelFactory
+import com.taurus.moviedbkotlin.di.ViewModelFactory
 import dagger.Binds
 import dagger.Module
 
