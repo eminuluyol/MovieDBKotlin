@@ -1,1 +1,1 @@
-include ':app', ':core', ':network'
+include ':app', ':core', ':repository'
