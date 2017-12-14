@@ -2,15 +2,17 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
+def libraries = rootProject.ext.libraries
+def configuration = rootProject.ext.configuration
+
 android {
+
   compileSdkVersion configuration.compileSdkVersion
+
   defaultConfig {
     minSdkVersion configuration.minSdkVersion
-    targetSdkVersion configuration.targetSdkVersion
-    versionCode configuration.versionCode
-    versionName configuration.versionName
-
   }
+
   buildTypes {
     release {
       minifyEnabled false

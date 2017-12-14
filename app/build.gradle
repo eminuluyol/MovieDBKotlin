@@ -2,16 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
-android {
-    compileSdkVersion configuration.compileSdkVersion
-    defaultConfig {
-        applicationId configuration.package
-        minSdkVersion configuration.minSdkVersion
-        targetSdkVersion configuration.targetSdkVersion
-        versionCode configuration.versionCode
-        versionName configuration.versionName
+def configuration = rootProject.ext.configuration
 
+android {
+
+    compileSdkVersion configuration.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion configuration.minSdkVersion
     }
+
     buildTypes {
         release {
             minifyEnabled false

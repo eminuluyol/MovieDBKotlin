@@ -4,16 +4,17 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
+def libraries = rootProject.ext.libraries
+def configuration = rootProject.ext.configuration
+
 android {
+
   compileSdkVersion configuration.compileSdkVersion
+
   defaultConfig {
     minSdkVersion configuration.minSdkVersion
-    targetSdkVersion configuration.targetSdkVersion
-    versionCode configuration.versionCode
-    versionName configuration.versionName
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
   }
+
   buildTypes {
     release {
       minifyEnabled false
