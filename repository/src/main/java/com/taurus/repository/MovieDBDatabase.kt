@@ -6,7 +6,7 @@ import com.taurus.repository.local.MovieDBDao
 import com.taurus.repository.local.MovieEntity
 
 @Database(
-    entities = arrayOf(MovieEntity::class),
+    entities = [(MovieEntity::class)],
     version = 1)
 abstract class MovieDBDatabase : RoomDatabase() {
   abstract fun getMovieDBDao(): MovieDBDao

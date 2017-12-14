@@ -10,12 +10,12 @@ import io.reactivex.Flowable
 abstract class MovieDBDao {
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
-  abstract fun insertGenres(list: List<MovieEntity>)
+  abstract fun insertMovies(list: List<MovieEntity>)
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
-  abstract fun insertGenre(list: MovieEntity)
+  abstract fun insertMovies(list: MovieEntity)
 
   @Query("SELECT * FROM genres")
-  abstract fun getGenres(): Flowable<List<MovieEntity>>
+  abstract fun getMovies(): Flowable<List<MovieEntity>>
 
 }

@@ -1,5 +1,6 @@
 package com.taurus.repository.di
 
+import com.taurus.repository.BuildConfig
 import com.taurus.repository.remote.MovieDBService
 import dagger.Module
 import dagger.Provides
@@ -34,10 +35,10 @@ class NetworkModule {
           .client(okHttpClient)
           .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
           .addConverterFactory(MoshiConverterFactory.create())
-          .baseUrl("https://image.tmdb.org/t/p/w500/")
+          .baseUrl(BuildConfig.API_URL)
           .build()
 
   @Provides
   @Singleton
-  fun provideFrekansService(retrofit: Retrofit) = retrofit.create(MovieDBService::class.java)
+  fun provideMovieDBService(retrofit: Retrofit) = retrofit.create(MovieDBService::class.java)
 }

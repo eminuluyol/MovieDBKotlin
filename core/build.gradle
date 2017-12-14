@@ -15,12 +15,6 @@ android {
     minSdkVersion configuration.minSdkVersion
   }
 
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    }
-  }
 }
 
 dependencies {
@@ -49,9 +43,6 @@ dependencies {
 
   api "com.squareup.picasso:picasso:${libraries.picasso}"
 
-  kapt 'com.google.dagger:dagger-compiler:2.13'
-  kapt 'com.google.dagger:dagger-android-processor:2.13'
-  kapt "android.arch.persistence.room:compiler:1.0.0"
   kapt "android.arch.lifecycle:compiler:1.0.0"
 
 }

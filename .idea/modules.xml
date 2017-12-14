@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MovieDBKotlin.iml" filepath="$PROJECT_DIR$/MovieDBKotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MovieDBKotlin 23.20.09.iml" filepath="$PROJECT_DIR$/MovieDBKotlin 23.20.09.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/repository/repository.iml" filepath="$PROJECT_DIR$/repository/repository.iml" />

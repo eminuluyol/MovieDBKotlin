@@ -8,8 +8,26 @@ android {
 
     compileSdkVersion configuration.compileSdkVersion
 
+    flavorDimensions "build"
+    productFlavors {
+        dev {
+            dimension "build"
+            applicationIdSuffix ".dev"
+            minSdkVersion configuration.devMinSdkVersion
+        }
+        prod {
+            dimension "build"
+            minSdkVersion configuration.minSdkVersion
+        }
+    }
+
     defaultConfig {
+        applicationId configuration.package
         minSdkVersion configuration.minSdkVersion
+        targetSdkVersion configuration.targetSdkVersion
+        versionCode configuration.versionCode
+        versionName configuration.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
