@@ -2,12 +2,12 @@ package com.taurus.repository
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
-import com.taurus.repository.local.MovieDBDao
-import com.taurus.repository.local.MovieEntity
+import com.taurus.repository.local.PopularMovieDBDao
+import com.taurus.repository.local.PopularMovieEntity
 
 @Database(
-    entities = [(MovieEntity::class)],
+    entities = [(PopularMovieEntity::class)],
     version = 1)
 abstract class MovieDBDatabase : RoomDatabase() {
-  abstract fun getMovieDBDao(): MovieDBDao
+  abstract fun getPopularMovieDBDao(): PopularMovieDBDao
 }

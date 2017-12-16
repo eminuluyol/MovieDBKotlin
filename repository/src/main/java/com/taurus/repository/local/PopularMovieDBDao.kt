@@ -7,15 +7,15 @@ import android.arch.persistence.room.Query
 import io.reactivex.Flowable
 
 @Dao
-abstract class MovieDBDao {
+abstract class PopularMovieDBDao {
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
-  abstract fun insertMovies(list: List<MovieEntity>)
+  abstract fun insertMovies(list: List<PopularMovieEntity>)
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
-  abstract fun insertMovies(list: MovieEntity)
+  abstract fun insertMovies(list: PopularMovieEntity)
 
-  @Query("SELECT * FROM movies")
-  abstract fun getMovies(): Flowable<List<MovieEntity>>
+  @Query("SELECT * FROM popular_movies")
+  abstract fun getMovies(): Flowable<List<PopularMovieEntity>>
 
 }

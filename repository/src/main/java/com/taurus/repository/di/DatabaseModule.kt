@@ -21,6 +21,6 @@ class DatabaseModule {
 
   @Provides
   @Singleton
-  fun provideMovieDBDao(db: MovieDBDatabase) = db.getMovieDBDao()
+  fun provideMovieDBDao(db: MovieDBDatabase) = db.getPopularMovieDBDao()
 
 }
