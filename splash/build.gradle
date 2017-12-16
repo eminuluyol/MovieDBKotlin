@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def configuration = rootProject.ext.configuration
+
+android {
+
+  compileSdkVersion configuration.compileSdkVersion
+
+  defaultConfig {
+    minSdkVersion configuration.minSdkVersion
+  }
+
+  flavorDimensions "build"
+  productFlavors {
+    dev {}
+    prod {}
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  implementation project(":repository")
+  implementation project(":core")
+}
