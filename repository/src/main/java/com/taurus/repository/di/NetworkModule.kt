@@ -2,6 +2,7 @@ package com.taurus.repository.di
 
 import com.taurus.repository.BuildConfig
 import com.taurus.repository.remote.MovieDBService
+import com.taurus.repository.remote.RequestInterceptor
 import dagger.Module
 import dagger.Provides
 import extensions.debug
@@ -25,6 +26,7 @@ class NetworkModule {
   fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
     val okhttpBuilder = OkHttpClient.Builder()
     debug { okhttpBuilder.addInterceptor(loggingInterceptor) }
+    okhttpBuilder.addInterceptor(RequestInterceptor())
     return okhttpBuilder.build()
   }
 
