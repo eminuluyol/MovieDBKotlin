@@ -15,7 +15,7 @@ abstract class MovieDBDao {
   @Insert(onConflict = OnConflictStrategy.REPLACE)
   abstract fun insertMovies(list: MovieEntity)
 
-  @Query("SELECT * FROM genres")
+  @Query("SELECT * FROM movies")
   abstract fun getMovies(): Flowable<List<MovieEntity>>
 
 }

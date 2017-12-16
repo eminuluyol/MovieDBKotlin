@@ -1,0 +1,13 @@
+<resources>
+
+  <dimen name="space_tiny">2dp</dimen>
+  <dimen name="space_small">4dp</dimen>
+  <dimen name="space_medium">8dp</dimen>
+  <dimen name="space_default">16dp</dimen>
+  <dimen name="space_large">24dp</dimen>
+  <dimen name="space_xlarge">32dp</dimen>
+  <dimen name="space_xxlarge">56dp</dimen>
+
+  <dimen name="list_card_elevation">4dp</dimen>
+
+</resources>
