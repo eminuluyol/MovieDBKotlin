@@ -1,5 +1,7 @@
 package com.taurus.splash
 
+import com.taurus.repository.local.PopularMovieEntity
+
 
 class SplashPresenter {
 
@@ -11,7 +13,7 @@ class SplashPresenter {
   }
 
   fun unbind() {
-    viewModel
+    viewModel.setListener(null)
   }
 
   private class SplashViewLister : SplashView.Listener {
@@ -19,6 +21,12 @@ class SplashPresenter {
     override fun onRetryClicked() {
       TODO()
     }
-
   }
+
+  private class SplashViewMddelListener : SplashViewModel.Listener {
+    override fun onGenreResponse(popularMovies: List<PopularMovieEntity>) {
+      TODO()
+    }
+  }
+
 }
