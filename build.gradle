@@ -1,58 +1,67 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+  ext.kotlin_version = '1.1.51'
 
-    repositories {
+  repositories {
+    google()
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.0.1'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.0"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+  }
+
+    
+}
+
+allprojects
+  {
+    repositories
+    {
         google()
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.0"
+    jcenter()
+  mavenCentral()
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        jcenter()
-        mavenCentral()
-    }
+task clean(type:
+  Delete) {
+    delete rootProject.
+
+  buildDir
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
-ext {
-
-    configuration = [
-        package          : "com.taurus.moviedbkotlin",
+ext {configuration = [
+        package          :
+                   "com.taurus.moviedbkotlin",
         compileSdkVersion: 27,
         targetSdkVersion : 27,
         minSdkVersion    : 21,
         devMinSdkVersion : 23,
         versionCode      : 1,
-        versionName      : "1.0.0"
+
+  versionName      : "1.0.0"
     ]
 
     libraries = [
-        kotlin           : "1.2.0",
-        support          : "27.0.2",
+               kotlin           : "1.2.0",
+               support          : "27.0.2",
         arch             : "1.0.0",
-        archRuntime      : "1.0.3",
-        dagger           : "2.13",
-        rxjava           : "2.1.6",
-        rxandroid        : "2.0.1",
-        rxkotlin         : "2.1.0",
-        okhttp           : "3.9.0",
-        retrofit         : "2.3.0",
-        moshi_version    : "1.5.0",
-        picasso          : "2.5.2",
-        supportTestRunner: "1.0.1",
-        espressoCore     : "3.0.1",
-        junit            : "4.12"
+               archRuntime      : "1.0.3",
+               dagger           : "2.13",
+               rxjava           : "2.1.6",
+               rxandroid        : "2.0.1",
+               rxkotlin         : "2.1.0",
+               okhttp           : "3.9.0",
+               retrofit         : "2.3.0",
+               moshi_version    : "1.5.0",
+               picasso          : "2.5.2",
+               supportTestRunner: "1.0.1",
+               espressoCore     : "3.0.1",
+junit            : "4.12"
     ]
 
 }

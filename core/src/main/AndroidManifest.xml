@@ -1,2 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.taurus.core" />
+    package="com.taurus.core" >
+
+  <uses-permission android:name="android.permission.INTERNET" />
+
+  <application/>
+
+</manifest>

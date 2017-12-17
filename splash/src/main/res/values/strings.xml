@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">splash</string>
+  <string name="splash_error">Something went wrong!</string>
 </resources>

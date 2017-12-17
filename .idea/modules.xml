@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/MovieDBKotlin 23.20.09.iml" filepath="$PROJECT_DIR$/MovieDBKotlin 23.20.09.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/home/home.iml" filepath="$PROJECT_DIR$/home/home.iml" />
       <module fileurl="file://$PROJECT_DIR$/repository/repository.iml" filepath="$PROJECT_DIR$/repository/repository.iml" />
       <module fileurl="file://$PROJECT_DIR$/splash/splash.iml" filepath="$PROJECT_DIR$/splash/splash.iml" />
     </modules>

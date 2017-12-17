@@ -12,10 +12,6 @@ android {
     minSdkVersion configuration.minSdkVersion
   }
 
-  androidExtensions {
-    experimental = true
-  }
-
   flavorDimensions "build"
   productFlavors {
     dev {}
@@ -28,4 +24,6 @@ dependencies {
 
   implementation project(":repository")
   implementation project(":core")
+  implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
